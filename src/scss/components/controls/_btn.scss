@@ -52,24 +52,24 @@
     box-shadow: $shadow;
   }
 
-  @media (any-hover: hover) {
-    &:hover {
-      text-decoration: none;
-      color: $text-color;
-      background-color: darken($gray-lightest, 10%);
-      border-color: darken($gray-lighter, 12%);
-      box-shadow: $shadow;
-    }
-  }
+  // @media (any-hover: hover) {
+  //   &:hover {
+  //     text-decoration: none;
+  //     color: $text-color;
+  //     background-color: darken($gray-lightest, 10%);
+  //     border-color: darken($gray-lighter, 12%);
+  //     box-shadow: $shadow;
+  //   }
+  // }
 
-  @media (hover: none) {
-    &:active {
-      text-decoration: none;
-      color: $text-color;
-      background-color: darken($gray-lightest, 10%);
-      border-color: darken($gray-lighter, 12%);
-    }
-  }
+  // @media (hover: none) {
+  //   &:active {
+  //     text-decoration: none;
+  //     color: $text-color;
+  //     background-color: darken($gray-lightest, 10%);
+  //     border-color: darken($gray-lighter, 12%);
+  //   }
+  // }
 
   &:visited {
     color: $text-color;

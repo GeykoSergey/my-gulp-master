@@ -199,23 +199,13 @@ h6 {
   background-color: #cccccc;
   border-color: #adadad;
 }
-@media (any-hover: hover) {
-  .btn:hover {
-    text-decoration: none;
-    color: hsl(0, 0%, 10%);
-    background-color: #cccccc;
-    border-color: #adadad;
-    -webkit-box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
-  }
-}
-@media (hover: none) {
-  .btn:active {
-    text-decoration: none;
-    color: hsl(0, 0%, 10%);
-    background-color: #cccccc;
-    border-color: #adadad;
-  }
+.btn:hover {
+  text-decoration: none;
+  color: hsl(0, 0%, 10%);
+  background-color: #cccccc;
+  border-color: #adadad;
+  -webkit-box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
 }
 .btn:visited {
   color: hsl(0, 0%, 10%);
