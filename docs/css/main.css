@@ -284,7 +284,7 @@ a.btn--disabled {
   box-shadow: 0 0 0 1px rgba(5, 135, 241, 0.464) inset;
 }
 
-.standart-select::-ms-expand {
+.standart-select__select::-ms-expand {
   display: none;
 }
 

@@ -2,7 +2,6 @@
 // у тега select непосредственно мы не можем использовать before и after
 // поэтому для того что бы создать стрелку создадим div standart-select__body
 // и положим внутрь его select
-
 .standart-select {
   &__body {
     position: relative;
@@ -57,6 +56,6 @@
 }
 
 // убираем стрелку в ie10, ie11
-.standart-select::-ms-expand {
+.standart-select__select::-ms-expand {
   display: none;
 }
