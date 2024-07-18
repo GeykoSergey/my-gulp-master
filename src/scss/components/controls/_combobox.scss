@@ -1,0 +1,76 @@
+.combobox {
+  position: relative;
+
+  #announcement {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    line-height: 1.2;
+    background-color: #fff;
+
+    &:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 5px 2px rgba(95, 176, 243, 0.7) inset;
+    }
+
+    &::after {
+      margin-left: auto;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      background-image: url("../img/tpl/icons/expand-more.svg");
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #b3e5fc;
+    max-height: 250px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: scale(1, 0);
+    transform-origin: top left;
+    transition: all 0.3s ease-in;
+    pointer-events: none;
+    z-index: 2;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1, 1);
+      pointer-events: auto;
+    }
+  }
+
+  &__item {
+    padding: 0 15px;
+    cursor: pointer;
+
+    &:hover,
+    &.current {
+      background-color: #e1f5fe;
+    }
+
+    &.active {
+      background-color: #81d4fa;
+      box-shadow: 0 0 5px 2px rgba(95, 176, 243, 0.7) inset;
+    }
+  }
+}
+
+.combobox.open .combobox__btn::after {
+  transform: rotate(180deg);
+}

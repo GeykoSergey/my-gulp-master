@@ -1,0 +1,113 @@
+// порядок focus hover active
+.btn {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  border-radius: $border-radius;
+  border: 1px solid $gray-lighter;
+  border: 0;
+  padding: $field-padding-vertical $field-padding-horizontal;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+  text-align: center;
+  font-size: 1em;
+  font-family: inherit;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: none;
+  color: $text-color;
+  background-color: $gray-lightest;
+  background-image: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:focus {
+    text-decoration: none;
+    color: $text-color;
+    background-color: darken($gray-lightest, 10%);
+    border-color: darken($gray-lighter, 12%);
+  }
+
+  // отключаем focus мышкой
+  // &:focus {
+  //   outline: 0;
+  // }
+
+  // &:focus-visible {
+  //   outline: 0;
+  //   box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  // }
+  // остается фокус с клавиатуры
+  // нужен полифил
+
+  @media (any-hover: hover) {
+    &:hover {
+      text-decoration: none;
+      color: $text-color;
+      background-color: darken($gray-lightest, 10%);
+      border-color: darken($gray-lighter, 12%);
+      box-shadow: $shadow;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      text-decoration: none;
+      color: $text-color;
+      background-color: darken($gray-lightest, 10%);
+      border-color: darken($gray-lighter, 12%);
+    }
+  }
+
+  &:visited {
+    color: $text-color;
+  }
+
+  &:active,
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: $opacity;
+    cursor: not-allowed;
+    color: $text-color;
+    background-color: $gray-lightest;
+    border-color: $gray-lighter;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  // &__icon {
+  //   display: inline-block;
+  //   vertical-align: middle;
+  // }
+
+  // &--main {
+  //   color: #fff;
+  //   background-color: $color-main;
+  //   // border: 1px solid $color-main;
+
+  //   &:focus,
+  //   &:hover {
+  //     color: #fff;
+  //     background-color: darken($color-main, 10%);
+  //     // border-color: darken($color-main, 12%);
+  //   }
+
+  //   &--disabled,
+  //   &:disabled {
+  //     color: #fff;
+  //     background-color: $color-main;
+  //     // border-color: $color-main;
+  //   }
+  // }
+}

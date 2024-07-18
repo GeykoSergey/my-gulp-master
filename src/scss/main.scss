@@ -3,14 +3,21 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import "utils";
 
 // подключения компонентов страницы
+@import "./components/controls/btn";
+@import "./components/controls/select";
+@import "./components/controls/combobox";
 @import "./components/header";
 
+
+@import "./components/tpl/tpl-img";
+
 // тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
+// .page__body {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: var(--vh);
+// }

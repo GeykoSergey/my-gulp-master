@@ -1,0 +1,60 @@
+<div class="container">
+  <form action="#" name="regForm">
+    <header id="form-header">
+      <h1>Регистрация</h1>
+    </header>
+
+    <section id="form-fields">
+      <div class="form-field">
+        <label for="firstname">Имя</label>
+        <input id="firstname" type="text" name="firstname" placeholder="First name" />
+
+        <p class="error" name="length">Длина имени должна быть больше 3</p>
+        <p class="error" name="alphabet">
+          Имя должно содержать только кириллицу
+        </p>
+      </div>
+      <div class="form-field">
+        <label for="lastname">Фамилия</label>
+        <input id="lastname" type="text" name="lastname" placeholder="Last name" />
+
+        <p class="error" name="length">Длина фамилии должна быть больше 4</p>
+        <p class="error" name="alphabet">
+          Фамилия должна содержать только кириллицу
+        </p>
+      </div>
+      <div class="form-field">
+        <label for="email">Почта</label>
+        <input id="email" type="email" name="email" placeholder="Email" />
+
+        <p class="error" name="emailError">Введите почту правильно</p>
+      </div>
+      <div class="form-field">
+        <label for="password">Придумайте пароль</label>
+        <input id="password" type="password" name="password" placeholder="********" />
+
+        <p class="error" name="length">Длина должна быть не меньше 8</p>
+        <p class="error" name="digit">Хотя бы одна цифра</p>
+        <p class="error" name="uppercase">Хотя бы одна заглавная буква</p>
+        <p class="error" name="lowercase">Хотя бы одна прописная буква</p>
+        <p class="error" name="punctuation">
+          Хотя бы один знак пунктуации: .,?\/#!$%\^&\*;:{}=\-_`~()
+        </p>
+      </div>
+    </section>
+
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+</div>
+
+<div id="modal">
+  <h1>Все ок!</h1>
+</div>
+
+
+<!-- Также можем вкладывать input в label -->
+<!-- Но крайне рекомендуется прописывать for и id -->
+<!-- <label for="input">
+  <span >Name</span>
+  <input id="input" type="text" placeholder="Name">
+</label> -->

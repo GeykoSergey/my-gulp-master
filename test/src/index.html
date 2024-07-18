@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+  <body class="page__body">
+    <div class="site-container">
+      <!-- @include('partials/header.html') -->
+      <main class="main" id="up">
+        <!-- @include('partials/breadcrumb.html') -->
+        <!-- @include('partials/catalog.html') -->
+        @include('partials/test.html')
+      </main>
+      <!-- @include('partials/subscribe.html') -->
+      <!-- @include('partials/footer.html') -->
+      <!-- @include('partials/footer.html') -->
+      @include('partials/controls.html')
+    </div>
+
+    <div id="modal-1" data-modal class="modal modal-hidden">
+      <div class="fade-block">
+        <div class="modal-window">
+          <div class="modal-content">
+            <header class="modal-header">
+              <h2 class="modal-title">Modal title</h2>
+              <button
+                type="button"
+                class="reset-btn btn close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </header>
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              aliquid fuga suscipit ipsum quod est reprehenderit sint ex
+              voluptatum, ullam at quae soluta repellendus ab, architecto
+              explicabo accusantium assumenda, magnam dicta recusandae inventore
+              praesentium! Nesciunt repellendus officiis fuga maxime magni
+              repellat, possimus asperiores ut quas voluptatem atque sapiente
+              cupiditate quis pariatur quibusdam.
+            </div>
+            <footer class="modal-footer">
+              <button type="button" class="btn-reset btn" data-modal-btn-close>
+                Close
+              </button>
+              <button type="button" class="btn-reset btn">Understood</button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#up" class="to-up">
+      <svg
+        class="icon to-up__icon view-mode__icon--grid view-mode__icon--no-active"
+      >
+        <use xlink:href="img/sprite.svg#icon-up"></use>
+      </svg>
+    </a>
+  </body>
+</html>

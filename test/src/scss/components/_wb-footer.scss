@@ -1,0 +1,140 @@
+.footer {
+  background-color: var(--color-bg-dark);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  &__columns {
+    display: flex;
+    // flex-wrap: wrap;
+  }
+
+  &__column {
+    flex: 1 1 33.33%;
+    padding: 10px 0;
+    color: var(--color-white);
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 64px;
+  }
+}
+
+.column-footer {
+  &__brand {
+    max-width: 346px;
+    // padding-right: 150px;
+  }
+
+  &__catalog {
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 32px;
+
+    &-contacts {
+      margin-left: 50px;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item-contacts {
+    position: relative;
+    padding-left: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--phone::before {
+      background-image: url("../../img/wb-footer/smartphone-icon.svg");
+    }
+
+    &--address::before {
+      background-image: url("../../img/wb-footer/navigation-icon.svg");
+    }
+
+    &--email {
+      white-space: nowrap;
+    }
+
+    &--email::before {
+      background-image: url("../../img/wb-footer/mail-icon.svg");
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__link {
+    display: block;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__for-clients {
+  }
+
+  &__contacts {
+  }
+}
+.logo {
+  &__image {
+  }
+}
+.img {
+}
+.brand-description {
+}
+.list-reset {
+}
+.copyright {
+  padding-top: 16px;
+  padding-bottom: 23px;
+  color: var(--color-white);
+  font-size: 16px;
+
+  &__brand {
+    margin-right: 24px;
+  }
+
+  &__description {
+  }
+}
+
+@media (hover: hover) {
+  .column-footer__link:hover {
+    color: var(--color-brand);
+  }
+}
+
+@media (hover: none) {
+  .column-footer__link:active {
+    color: var(--color-brand);
+  }
+}
